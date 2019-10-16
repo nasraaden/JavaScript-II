@@ -4,6 +4,18 @@
 // that manipulates variables defined in the outer scope.
 // The outer scope can be a parent function, or the top level of the script.
 
+function parent(parentName){
+  console.log(`${parentName} is a mother and grandmother.`);
+  function child(childName){
+    console.log(`${childName} is the son of ${parentName} and has a son himself.`);
+    function granchild(granchildName){
+      console.log(`${granchildName} is the son of ${childName} and the grandson of ${parentName}.`);
+    }//closes grandchild
+    granchild("Sam");
+  }//closes child
+  child("George");
+}//closes parent
+parent("Susan");
 
 /* STRETCH PROBLEMS, Do not attempt until you have completed all previous tasks for today's project files */
 
